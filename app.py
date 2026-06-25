@@ -512,14 +512,14 @@ def load_and_preprocess_data():
         # Drop unused columns
         cols_to_drop = ['budget', 'homepage', 'original_language', 'popularity', 
                         'production_companies', 'production_countries', 'revenue', 'spoken_languages']
-        df.drop(columns=[col for col in cols_to_drop if col in df.columns], axis=1, inplace=True)
+        df.drop(columns=[col for col in cols_to_drop if col in df.columns], inplace=True)
         
         # Fill runtime
         df['runtime'] = df['runtime'].fillna(df['runtime'].mean()).astype(int)
         
         # Keep only released movies
         df = df[df['status'] == 'Released'].copy()
-        df.drop(columns=['status'], axis=1, inplace=True, errors='ignore')
+        df.drop(columns=['status'], inplace=True, errors='ignore')
         
         # Clean cast (up to 3 names, remove spaces)
         def extract_cast(text):
