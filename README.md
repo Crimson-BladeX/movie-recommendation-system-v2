@@ -93,7 +93,23 @@ movie-recommendation-system-v2/
 │   ├── tmdb_movies.csv
 │   └── tmdb_credits.csv
 ```
+## 📸 Screenshots
 
+### Home Page
+
+![Home](assets/home.png)
+
+---
+
+### Movie Recommendations
+
+![Recommendations](assets/recommendations.png)
+
+---
+
+### Genre Explorer
+
+![Genre](assets/genre.png)
 ---
 
 ## 👨‍💻 Author
